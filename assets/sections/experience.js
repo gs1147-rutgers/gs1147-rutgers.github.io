@@ -1,0 +1,11 @@
+/* Full-time experience timeline (about me > experience).
+   Edit only this file to change this section. Other sections are unaffected.
+   Keep the quotes, commas and brackets intact. */
+CONFIG.experience = [
+  { org: "Salesforce, Hyderabad, India", role: "Engineer: Customer Success", when: "Sep, 2022 – Jan, 2025",
+    text: "At Salesforce Inc., I engineered scalable CRM and machine learning-based automation solutions across the lead-to-cash, sales, billing, and marketing lifecycle for enterprise clients, architecting end-to-end CPQ renewal automation configuring subscription and contract-based renewal models with auto-generated renewal opportunities that cut renewal quote preparation time by 60%. I embedded AI and LLM capabilities into existing tools and workflows, scaling team output by 3x while partnering with senior engineers on complex builds, and developed data streaming pipelines and microservices on internal cloud platforms using Python, Kafka, and AWS. I also applied predictive analytics to revenue recognition, collaborating with leadership to shift enterprise clients to ARR-based forecasting models and improving future revenue forecast accuracy by 30-35% and responsible for driving solid design principles & best practices across cross-functional teams.",
+    tags: ["Sales Cloud", "Service Cloud", "CPQ", "CRM Analytics","Mulesoft", "Agentforce","Aynchronous Apex","Platform Events"] },
+  { org: "Coforge, Noida, India", role: "Software Engineer", when: "Sep, 2021 – Sep, 2022",
+    text: "At Coforge Ltd., I implemented Next Best Action (NBA), an ML-based intelligent case classification and routing system that reduced case resolution time by 20% through automated, data-driven case triage. I also led the analysis of existing workflows, process builders and lightning flows, implementing CPQ price rule logic to automate product-specific discount conditions, eliminating manual quote configuration and introducing a governed, validation rules-driven pricing framework. To support reliable delivery across these initiatives, I designed automated deployment pipelines using Jenkins, Docker, and Kubernetes, achieving a 3x reduction in deployment times.",
+    tags: ["Ligthning Flows", "LWC", "Apex Triggers", "REST / SOAP", "Copado"] }
+];

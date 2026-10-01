@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gagandeep | Salesforce Engineer</title>
+<meta name="description" content="Gagandeep — Salesforce engineer and architect: Apex, LWC, CPQ, and enterprise integrations.">
+<!-- Link previews (LinkedIn, Slack, iMessage). Replace the URL and image once deployed. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gagandeep | Salesforce Engineer">
+<meta property="og:description" content="Salesforce engineer and architect: Apex, LWC, CPQ, and enterprise integrations.">
+<meta property="og:url" content="https://gagandeepsingh.me/">
+<meta property="og:image" content="https://gagandeepsingh.me/assets/img/profile.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1D7FA8">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600&family=Figtree:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" id="logo"></a>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#about">about</a><a href="#skills">skills</a><a href="#portfolio">portfolio</a><a href="#contact">contact</a>
+    </nav>
+    <button class="iconbtn menu" id="menu" type="button" aria-label="Open menu" aria-expanded="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="band">
+    <div class="wrap hero">
+      <div class="photo"><div class="frame" id="photo"></div></div>
+      <div>
+        <h1 class="hello">hello there! <span class="wave" aria-hidden="true">👋</span></h1>
+        <p class="rotator" aria-live="polite">I'm <span id="hname"></span>, and I <b id="rot"></b><span class="caret" aria-hidden="true"></span></p>
+        <p class="intro" id="intro"></p>
+        <div class="socials" id="socials"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT ME: education + experience -->
+  <section id="about" aria-labelledby="h-about">
+    <div class="wrap">
+      <div class="sh"><h2 id="h-about">about me<b>.</b></h2><hr></div>
+      <div class="two">
+        <div><h3 class="col">education</h3><div class="tl" id="edu"><span class="fill"></span></div></div>
+        <div><h3 class="col">experience</h3><div class="tl" id="exp"><span class="fill"></span></div></div>
+      </div>
+      <div style="margin-top:4rem" class="full">
+        <h3 class="col">part-time experience</h3><div class="tl" id="pt"><span class="fill"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="band" aria-labelledby="h-skills">
+    <div class="wrap">
+      <div class="sh"><h2 id="h-skills">skills<b>.</b></h2><hr></div>
+      <div class="skills" id="skillgrid"></div>
+      <div class="sh" style="margin:4.75rem 0 1.75rem"><h2 style="font-size:clamp(1.6rem,3vw,2.1rem)">certifications<b>.</b></h2><hr></div>
+      <div class="certs" id="certs"></div>
+      <div class="cert-note" id="certnote"></div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio" aria-labelledby="h-port">
+    <div class="wrap">
+      <div class="sh"><h2 id="h-port">portfolio<b>.</b></h2><hr></div>
+      <div class="tabs" role="tablist" aria-label="Portfolio type">
+        <button class="tab" role="tab" id="tab-dev" aria-selected="true" aria-controls="panel-dev">development</button>
+        <button class="tab" role="tab" id="tab-des" aria-selected="false" aria-controls="panel-des">design</button>
+      </div>
+      <div class="panel" id="panel-dev" role="tabpanel" aria-labelledby="tab-dev"><div class="cards" id="cards"></div><div class="more-row"><button class="obtn more" type="button" id="more-dev" hidden>show more</button></div></div>
+      <div class="panel" id="panel-des" role="tabpanel" aria-labelledby="tab-des" hidden><div class="designs" id="designs"></div><div class="more-row"><button class="obtn more" type="button" id="more-des" hidden>show more</button></div></div>
+    </div>
+  </section>
+
+  <!-- RECOMMENDATIONS -->
+  <section id="recommendations" class="band" aria-labelledby="h-recs">
+    <div class="wrap">
+      <div class="sh"><h2 id="h-recs">recommendations<b>.</b></h2><hr></div>
+      <div class="recs" id="recs"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" aria-labelledby="h-contact">
+    <div class="wrap">
+      <div class="sh"><h2 id="h-contact">contact<b>.</b></h2><hr><p>Have a role in mind or want to set up a call? Send a message or an interview invite.</p></div>
+      <form class="cform" id="cform" novalidate>
+        <fieldset class="kinds">
+          <legend>What would you like to do?</legend>
+          <label><input type="radio" name="kind" id="k1" value="Message" checked>✉️ Send a message</label>
+          <label><input type="radio" name="kind" id="k2" value="Interview invite">📅 Send an interview invite</label>
+        </fieldset>
+        <input id="f-name" name="name" placeholder="name" autocomplete="name" aria-label="Name">
+        <input id="f-email" name="email" type="email" placeholder="email" autocomplete="email" aria-label="Email">
+        <input id="f-co" name="company" placeholder="company (optional)" autocomplete="organization" aria-label="Company">
+        <div class="when-row" id="when-row">
+          <div class="when-grid">
+            <label class="fld"><span>proposed date &amp; time</span><input id="f-when" type="datetime-local" step="900"></label>
+            <label class="fld"><span>length</span><select id="f-dur"><option value="30" selected>30 min</option><option value="45">45 min</option><option value="60">1 hour</option></select></label>
+          </div>
+          <p class="tz" id="tz"></p>
+        </div>
+        <textarea id="f-msg" name="message" placeholder="message" aria-label="Message"></textarea>
+        <input type="text" name="_gotcha" id="f-trap" tabindex="-1" autocomplete="off" hidden>
+        <button class="send" type="submit" id="send">Send</button>
+        <p class="hint" id="hint">I reply within two business days.</p>
+        <div class="toast" id="toast" hidden></div>
+      </form>
+      <p class="alt">Prefer email? <code id="emailtxt"></code> <button type="button" id="cpy">copy</button></p>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span id="copyright"></span><div class="socials" id="fsocials" style="margin:0"></div></div></footer>
+
+<div class="modal-bg" id="modal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="m-title" id="modal-box"></div></div>
+
+<script src="assets/config.js"></script>
+<!-- One file per section. Edit a section in assets/sections/ without touching the others. -->
+<script src="assets/sections/education.js"></script>
+<script src="assets/sections/experience.js"></script>
+<script src="assets/sections/part-time.js"></script>
+<script src="assets/sections/skills.js"></script>
+<script src="assets/sections/certifications.js"></script>
+<script src="assets/sections/development.js"></script>
+<script src="assets/sections/design.js"></script>
+<script src="assets/sections/recommendations.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>
