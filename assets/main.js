@@ -57,11 +57,11 @@ document.addEventListener("error", e => {
 }, true);
 
 function devCard(p, i){
-  const tags = p.tags || [], extra = tags.length - 5;
+  const tags = p.tags || [], extra = tags.length - 4;
   return `<article class="card" data-kind="development" data-i="${i}"${i >= shown.development ? " hidden" : ""}>
     <button class="shot" type="button" data-open="development:${i}" aria-label="Open ${esc(p.title)}">${coverOf(p) ? img(projImg(p, coverOf(p)), "Screenshot of " + p.title, p.title) : mock(p.title)}</button>
-    <div class="body"><h4>${esc(p.title)}</h4>${metaLine(p) ? `<div class="pmeta">${metaLine(p)}</div>` : ""}
-      ${chips(tags.slice(0, 5).concat(extra > 0 ? [`+${extra} more`] : []))}
+    <div class="body"><h4>${esc(p.title)}</h4><div class="pmeta">${metaLine(p)}</div>
+      ${chips(tags.slice(0, 4).concat(extra > 0 ? [`+${extra} more`] : []))}
       <div class="ov">Overview</div><p>${p.overview || ""}</p>
       <div class="acts"><button class="obtn" type="button" data-open="development:${i}">read more</button>${linkBtns(p)}</div></div>
   </article>`;

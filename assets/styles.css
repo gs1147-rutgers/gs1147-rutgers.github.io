@@ -139,6 +139,18 @@ h3.col{font:400 1.8rem/1.2 var(--display);margin:0 0 28px}
 .mock .mg div{background:color-mix(in srgb,var(--surface) 80%,transparent);border-radius:6px;border:1px solid var(--line)}
 .mock .mg div:first-child{grid-row:span 2;display:flex;align-items:end;padding:10px;font:500 .78rem/1.3 var(--mono);color:var(--muted)}
 .card .body{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;flex:1}
+/* Cards in the same row share row tracks (image, title, meta, tags, overview, text, buttons),
+   so each part lines up across the row no matter how long the title or tag list is. */
+@supports (grid-template-rows:subgrid){
+  .cards{row-gap:0}
+  .card{display:grid;grid-row:span 7;grid-template-rows:subgrid;row-gap:0;margin-bottom:1.5rem;min-width:0}
+  .card .body{display:contents}
+  .card .body>*{padding-inline:1.3rem}
+  .card .chips{align-content:flex-start}
+  .card h4{padding-top:1.2rem}
+  .card .acts{padding-bottom:1.4rem}
+  .cards+.more-row{margin-top:.7rem}
+}
 .card h4{font:400 1.3rem/1.3 var(--display);margin:0}
 button.shot{display:block;width:100%;border:0;padding:0;cursor:pointer;font:inherit;color:inherit}
 .pmeta{font-size:.85rem;color:var(--dim);margin-top:.3rem}
@@ -252,7 +264,7 @@ footer .soc:hover{background:var(--bg);color:var(--ink)}
   .mhead,.mscroll,.mfoot{padding-inline:1rem}
   .mblock p{text-align:left}
   section{padding-block:3.75rem}
-  .cards,.skills,.certs{grid-template-columns:1fr}
+  .cards,.skills,.certs{grid-template-columns:minmax(0,1fr)}
   .tl{padding-left:44px}
   .tl::before,.tl .fill{left:11px}
   .item::before{left:-44px;width:24px;height:24px}
