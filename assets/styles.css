@@ -18,9 +18,9 @@ a{color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
 .wrap{max-width:74rem;margin:0 auto;padding-inline:clamp(16px,4vw,2.5rem)}
 /* PAGE SCALE: the whole page is sized from this one value, and it grows smoothly with screen width.
-   About 14px on phones and tablets, 15px on laptops and 16.5px on large monitors, capped at 17.2px.
-   To make everything bigger or smaller, nudge the middle number, e.g. .625rem to .6875rem. */
-html{font-size:clamp(.875rem, .625rem + .34vw, 1.075rem)}
+   About 14.5px on phones and tablets, 15.6px on laptops and 17.3px on large monitors, capped at 17.8px.
+   To make everything bigger or smaller, nudge the middle number, e.g. .6635rem to .7rem. */
+html{font-size:clamp(.905rem, .6635rem + .3474vw, 1.11rem)}
 .band{background:var(--band)}
 
 /* progress + header */
